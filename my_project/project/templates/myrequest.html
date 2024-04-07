@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Запрос
+{% endblock %}
+
+{% block body %}
+<section class="title container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Здесь Вы можете послать свой запрос для поиска игрушки в магазине URAL TOYS</h2>
+      <div class="seperator"></div>
+    </div>
+  </div>
+</section>
+
+<form method="post" class="form-control">
+    <input type="search" class="form-control form-control-dark text-bg-white" name="title" placeholder="Введите название игрушки..." aria-label="Search">
+</form>
+{% endblock %}

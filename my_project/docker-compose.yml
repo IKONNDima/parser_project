@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  my_app:
+    container_name: my_parser
+    restart: on-failure
+    build: 
+      context: .
+      dockerfile: ./project/Dockerfile
+    ports:
+      - 5001:5001
+    command: python3 app.py

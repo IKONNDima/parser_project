@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Ответ на ваш запрос
+{% endblock %}
+
+{% block body %}
+<section class="title container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ title }}</h1>
+      <div class="seperator"></div>
+      <p>Для регистрации следующего запроса нажмите на кнопу "Запрос"</p>
+    </div>
+  </div>
+</section>
+
+
+<div class="row">
+  {% for toys in gettoys %}
+  <div class="col-md-6 item">
+    <div class="item-in">
+      <h2>{{ toys.title }}</h2>
+      <div class="seperator"></div>
+      <h4 class="mt-1">Бренд: {{ toys.brand_name }}</h4>
+      <a href="{{ toys.url }}"> <p>{{ toys.url }}</p></a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
